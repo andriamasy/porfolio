@@ -62,9 +62,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            8+ ans d'expérience en développement web full-stack. Expert en Symfony, Laravel, ReactJS, TypeScript.
+            8+ ans d&apos;expérience en développement web full-stack. Expert en Symfony, Laravel, ReactJS, TypeScript.
             <br />
-            Passionné par l'optimisation des performances, l'automatisation CI/CD et les bonnes pratiques de développement.
+            Passionné par l&apos;optimisation des performances, l&apos;automatisation CI/CD et les bonnes pratiques de développement.
           </motion.p>
 
           <motion.div

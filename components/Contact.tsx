@@ -58,7 +58,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Intéressé par une collaboration ? N'hésitez pas à me contacter.
+            Intéressé par une collaboration ? N&apos;hésitez pas à me contacter.
             Je suis toujours ouvert à discuter de nouveaux projets et opportunités.
           </p>
         </motion.div>

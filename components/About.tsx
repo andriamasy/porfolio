@@ -13,7 +13,7 @@ export default function About() {
     {
       icon: FaUsers,
       title: 'Leadership & Mentorat',
-      description: 'Direction technique d\'équipes, supervision du développement, distribution des tâches et suivi technique. Mentorat des développeurs.',
+      description: 'Direction technique d&apos;équipes, supervision du développement, distribution des tâches et suivi technique. Mentorat des développeurs.',
     },
     {
       icon: FaRocket,
@@ -37,9 +37,9 @@ export default function About() {
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Lead Developer avec 8+ ans d'expérience en développement web full-stack. Expert en Symfony, Laravel, 
+            Lead Developer avec 8+ ans d&apos;expérience en développement web full-stack. Expert en Symfony, Laravel, 
             ReactJS, TypeScript, JavaScript, Angular et en application des principes SOLID, Design Patterns, DRY, et KISS. 
-            Passionné par l'optimisation des performances, l'automatisation CI/CD et les bonnes pratiques de développement.
+            Passionné par l&apos;optimisation des performances, l&apos;automatisation CI/CD et les bonnes pratiques de développement.
           </p>
         </motion.div>
 
