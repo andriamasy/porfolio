@@ -37,8 +37,9 @@ export default function About() {
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Lead Developer avec 8+ ans d&apos;expérience en développement web full-stack. Expert en Symfony, Laravel, 
-            ReactJS, TypeScript, JavaScript, Angular et en application des principes SOLID, Design Patterns, DRY, et KISS. 
+            Développeur Symfony, Développeur ReactJS, Développeur TypeScript et Développeur Laravel avec 8+ ans d&apos;expérience. 
+            Lead Developer à Madagascar spécialisé en développement web full-stack. Expert en Symfony, Laravel, ReactJS, TypeScript, JavaScript, Angular, NestJS et Next.js. 
+            Application rigoureuse des principes SOLID, Design Patterns, DRY, et KISS. Développeur freelance disponible pour vos projets web à Antananarivo et partout à Madagascar. 
             Passionné par l&apos;optimisation des performances, l&apos;automatisation CI/CD et les bonnes pratiques de développement.
           </p>
         </motion.div>
