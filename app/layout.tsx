@@ -121,7 +121,6 @@ export const metadata: Metadata = {
   },
   category: 'Portfolio Professionnel',
   classification: 'Développeur Web Full-Stack',
-  
   verification: {
     google: 'SSv_6goMdeeDIa4EebKqfeNBth8GDRQmOdWml6',
   },
