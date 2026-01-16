@@ -122,7 +122,7 @@ export const metadata: Metadata = {
   category: 'Portfolio Professionnel',
   classification: 'Développeur Web Full-Stack',
   verification: {
-    google: 'NHQG64qaAqq', // À remplacer par votre code de vérification Google Search Console
+    google: 'SSv_6goMdeeDIa4EebKqfeNBth8GDRQmOdWml6',
   },
 }
 
