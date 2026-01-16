@@ -24,6 +24,12 @@ export default function Contact() {
       href: 'https://linkedin.com/in/andriamasy',
     },
     {
+      icon: FaGithub,
+      label: 'GitHub',
+      value: 'github.com/andriamasy',
+      href: 'https://github.com/andriamasy',
+    },
+    {
       icon: FaMapMarkerAlt,
       label: 'Localisation',
       value: 'Antananarivo, Madagascar',

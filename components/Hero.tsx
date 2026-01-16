@@ -13,7 +13,7 @@ export default function Hero() {
 
   const socialLinks = [
     { icon: FaLinkedin, href: 'https://linkedin.com/in/andriamasy', label: 'LinkedIn' },
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
+    { icon: FaGithub, href: 'https://github.com/andriamasy', label: 'GitHub' },
     { icon: FaEnvelope, href: 'mailto:m.andriamasy@outlook.fr', label: 'Email' },
   ]
 
@@ -62,9 +62,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            8+ ans d&apos;expérience en développement web full-stack. Expert en Symfony, Laravel, ReactJS, TypeScript.
+            8+ ans d&apos;expérience en développement web full-stack. Expert en Symfony, Laravel, ReactJS, TypeScript, Angular.
             <br />
-            Passionné par l&apos;optimisation des performances, l&apos;automatisation CI/CD et les bonnes pratiques de développement.
+            Passionné par l&apos;optimisation des performances, l&apos;automatisation CI/CD, les principes SOLID, DRY et Clean Architecture.
           </motion.p>
 
           <motion.div
