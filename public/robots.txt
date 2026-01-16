@@ -4,5 +4,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-Sitemap: https://andriamasy.vercel.app/sitemap.xml
-Sitemap: https://andriamasy.vercel.app/public/sitemap.xml
+Sitemap: https://andriamasy.vercel.app/sitemap-v2.xml
