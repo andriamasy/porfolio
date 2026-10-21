@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -54,5 +53,4 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #0284c7;
 }
-
 

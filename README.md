@@ -23,6 +23,25 @@ Portfolio professionnel moderne de Lead Developer avec 8+ ans d'expérience en d
 - **Tailwind CSS** - Framework CSS utility-first
 - **Framer Motion** - Animations et transitions
 - **React Icons** - Bibliothèque d'icônes
+- **Vercel Web Analytics** et **Google Analytics 4** - Mesure d'audience après consentement
+
+## 📊 Analytique et confidentialité
+
+Vercel Web Analytics et Google Analytics 4 ne sont chargés qu'après acceptation
+dans la bannière de consentement. Les visiteurs peuvent modifier leur choix via
+le lien « Préférences de confidentialité » dans le pied de page.
+
+Pour activer Vercel Web Analytics, activez **Analytics** dans le tableau de bord
+Vercel du projet après le déploiement.
+
+Pour activer Google Analytics 4 :
+
+1. Créez une propriété GA4 et récupérez son identifiant de mesure (`G-...`).
+2. Dans Vercel, ajoutez la variable d'environnement
+   `NEXT_PUBLIC_GA_MEASUREMENT_ID` avec cet identifiant pour Production
+   (et Preview si souhaité).
+3. Redéployez le site. Sans cette variable, Vercel Analytics fonctionne toujours
+   après consentement, mais GA4 reste désactivé.
 
 ## 📦 Installation
 
@@ -148,4 +167,3 @@ Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou un
 **Portfolio de Andriamasy Eric Mathieu** - Lead Developer
 
 Créé avec Next.js, TypeScript, Tailwind CSS et Framer Motion
-

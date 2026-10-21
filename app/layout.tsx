@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import StructuredData from '@/components/StructuredData'
+import AnalyticsConsent from '@/components/AnalyticsConsent'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -65,6 +66,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={inter.className}>
         <StructuredData />
+        <AnalyticsConsent />
         <Navbar />
         <main className="min-h-screen">
           {children}

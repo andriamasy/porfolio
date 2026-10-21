@@ -1,3 +1,5 @@
+import AnalyticsPreferencesButton from '@/components/AnalyticsPreferencesButton'
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -11,10 +13,10 @@ export default function Footer() {
           <p className="mt-2 text-sm">
             Construit avec Next.js, TypeScript et Tailwind CSS
           </p>
+          <AnalyticsPreferencesButton />
         </div>
       </div>
     </footer>
   )
 }
-
 
