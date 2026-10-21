@@ -1,6 +1,6 @@
 # Guide Google Search Console - Référencement
 
-Votre portfolio est maintenant optimisé pour Google ! Suivez ces étapes pour le référencer.
+Le référencement prend du temps et aucune position n'est garantie. Utilisez Google Search Console pour vérifier l'indexation et suivre les impressions, les clics et les requêtes.
 
 ## 🎯 Votre domaine
 **https://andriamasy.vercel.app**
@@ -57,7 +57,7 @@ Une fois vérifié :
 
 ## 🔍 Mots-clés optimisés pour vos recherches
 
-Votre site est optimisé pour ces recherches :
+Ces recherches sont des exemples de sujets pertinents, pas une garantie d'apparition ou de positionnement :
 
 ### Recherches principales :
 - ✅ "Lead Developer Madagascar"
@@ -102,9 +102,7 @@ Votre site est optimisé pour ces recherches :
 
 ## ⏱️ Temps d'indexation
 
-- **Première indexation** : 1-2 semaines après soumission
-- **Indexation complète** : 2-4 semaines
-- **Apparition dans les résultats** : 2-6 semaines
+Google ne garantit pas de délai d'indexation ou de classement. Suivez l'état dans Search Console et inspectez l'URL si elle n'est toujours pas indexée.
 
 ## 🚀 Optimisations supplémentaires
 
@@ -130,7 +128,7 @@ Votre site est optimisé pour ces recherches :
 - [ ] Site déployé avec le code de vérification
 - [ ] Propriété vérifiée dans Google Search Console
 - [ ] Sitemap soumis : `sitemap.xml`
-- [ ] Attente de l'indexation (1-2 semaines)
+- [ ] Suivi régulier de l'indexation et des performances dans Search Console
 
 ## 🔗 Liens utiles
 
@@ -147,4 +145,4 @@ Si vous avez des questions :
 
 ---
 
-**Une fois configuré, votre portfolio sera visible sur Google en recherchant vos compétences ! 🎉**
+La configuration aide Google à découvrir le site, mais le classement dépend aussi du contenu, de la concurrence et des liens vers le portfolio.

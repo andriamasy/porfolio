@@ -1,6 +1,6 @@
 # 🚀 Étape Suivante : Configuration Google Search Console
 
-Votre portfolio est maintenant optimisé pour apparaître dans les recherches Google, y compris pour :
+Le site est configuré pour être découvert par Google. Les recherches ci-dessous sont des exemples de sujets pertinents, pas une garantie d'apparition ou de positionnement :
 - ✅ "Développeur Symfony"
 - ✅ "Développeur ReactJS"
 - ✅ "Développeur TypeScript"
@@ -97,7 +97,7 @@ Une fois vérifié :
 
 ### Test manuel dans Google
 
-Après 1-2 semaines, testez ces recherches dans Google :
+Vous pouvez tester ces recherches, mais suivez surtout les impressions et requêtes dans le rapport Performances de Search Console :
 
 - `site:andriamasy.vercel.app`
 - "Développeur Symfony"
@@ -109,9 +109,7 @@ Après 1-2 semaines, testez ces recherches dans Google :
 
 ## ⏱️ Délais d'indexation
 
-- **Première indexation** : 1-2 semaines après soumission du sitemap
-- **Indexation complète** : 2-4 semaines
-- **Apparition dans les résultats** : 2-6 semaines
+Google ne garantit pas de délai d'indexation ou de classement. Le délai varie selon le site et Google peut choisir de ne pas indexer certaines pages.
 
 **Note** : C'est normal que ça prenne du temps. Google doit découvrir et indexer votre site.
 
@@ -137,7 +135,7 @@ Après 1-2 semaines, testez ces recherches dans Google :
 
 ## 🎯 Recherches optimisées
 
-Votre site apparaîtra maintenant pour :
+Ces mots-clés ne garantissent pas que le site apparaîtra pour ces recherches :
 
 ### ✅ Recherches avec localisation :
 - "Développeur Symfony Madagascar"
@@ -165,7 +163,7 @@ Votre site apparaîtra maintenant pour :
 - [ ] Site déployé avec le code de vérification
 - [ ] Propriété vérifiée dans Google Search Console
 - [ ] Sitemap soumis : sitemap.xml
-- [ ] Attente de l'indexation (1-2 semaines)
+- [ ] Suivi régulier de l'indexation et des performances dans Search Console
 
 ## 🔗 Liens utiles
 
@@ -196,10 +194,4 @@ Votre site apparaîtra maintenant pour :
 
 ## 🎉 Félicitations !
 
-Votre portfolio est maintenant :
-- ✅ Optimisé pour Google
-- ✅ Visible pour "Développeur Symfony", "Développeur ReactJS", etc.
-- ✅ Prêt à être indexé par Google
-- ✅ Configuré avec toutes les métadonnées SEO
-
-**Il ne reste plus qu'à configurer Google Search Console et attendre l'indexation ! 🚀**
+Votre portfolio possède les éléments techniques de base pour être exploré par Google. Pour améliorer sa visibilité, enrichissez les descriptions de projets, partagez le site depuis des profils pertinents et suivez les résultats dans Search Console.

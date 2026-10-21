@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: `${baseUrl}/sitemap-v2.xml`,
+    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }

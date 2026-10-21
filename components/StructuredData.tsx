@@ -6,7 +6,7 @@ export default function StructuredData() {
     jobTitle: 'Lead Developer',
     description: 'Lead Developer avec 8+ ans d\'expérience en développement web full-stack. Expert en Symfony, Laravel, ReactJS, TypeScript, Angular.',
     url: 'https://andriamasy.vercel.app',
-    image: 'https://andriamasy.vercel.app/og-image.jpg',
+    image: 'https://andriamasy.vercel.app/opengraph-image',
     email: 'm.andriamasy@outlook.fr',
     telephone: '+261 34 62 949 41',
     address: {
@@ -126,37 +126,6 @@ export default function StructuredData() {
     ],
   }
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Accueil',
-        item: 'https://andriamasy.vercel.app',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Compétences',
-        item: 'https://andriamasy.vercel.app/#skills',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Projets',
-        item: 'https://andriamasy.vercel.app/#projects',
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: 'Contact',
-        item: 'https://andriamasy.vercel.app/#contact',
-      },
-    ],
-  }
-
   return (
     <>
       <script
@@ -170,10 +139,6 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   )
