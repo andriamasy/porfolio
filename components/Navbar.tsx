@@ -40,7 +40,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <a
@@ -55,9 +55,12 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+              aria-expanded={isOpen}
               className="text-gray-300 hover:text-primary-400 focus:outline-none"
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -68,7 +71,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-900/95 backdrop-blur-sm">
+        <div className="lg:hidden bg-gray-900/95 backdrop-blur-sm">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <a
@@ -86,4 +89,3 @@ export default function Navbar() {
     </nav>
   )
 }
-

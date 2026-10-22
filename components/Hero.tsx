@@ -1,112 +1,94 @@
-'use client'
+import Image from 'next/image'
+import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa'
 
-import { useEffect, useState } from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa'
-import { motion } from 'framer-motion'
+const socialLinks = [
+  { icon: FaLinkedin, href: 'https://linkedin.com/in/andriamasy', label: 'LinkedIn' },
+  { icon: FaGithub, href: 'https://github.com/andriamasy', label: 'GitHub' },
+  { icon: FaEnvelope, href: 'mailto:m.andriamasy@outlook.fr', label: 'Email' },
+]
 
 export default function Hero() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  const socialLinks = [
-    { icon: FaLinkedin, href: 'https://linkedin.com/in/andriamasy', label: 'LinkedIn' },
-    { icon: FaGithub, href: 'https://github.com/andriamasy', label: 'GitHub' },
-    { icon: FaEnvelope, href: 'mailto:m.andriamasy@outlook.fr', label: 'Email' },
-  ]
-
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+      className="relative isolate flex min-h-[88vh] items-center overflow-hidden bg-gray-950 px-4 pb-20 pt-28 sm:px-6 lg:px-8"
     >
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-gray-900 to-primary-900">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxNzE3MTciIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
-      </div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary-900/50 via-gray-950 to-gray-950"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -right-32 top-20 -z-10 h-96 w-96 rounded-full bg-primary-500/10 blur-3xl"
+      />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={mounted ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={mounted ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
-          >
-            <span className="text-gray-300">Andriamasy Eric</span>
-            <br />
-            <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-              Mathieu
-            </span>
-          </motion.h1>
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1fr_280px] lg:gap-20">
+        <div>
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-400/30 bg-primary-400/10 px-4 py-2 text-sm font-medium text-primary-200">
+            <FaMapMarkerAlt aria-hidden="true" />
+            Antananarivo, Madagascar
+          </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={mounted ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-2xl md:text-3xl font-semibold text-primary-400 mb-4"
-          >
-            Lead Developer
-          </motion.p>
+          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Andriamasy Eric Mathieu
+          </h1>
+          <h2 className="mt-5 text-2xl font-semibold text-primary-300 sm:text-3xl">
+            Lead développeur full-stack
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={mounted ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-          >
-            Développeur Symfony, Développeur ReactJS, Développeur TypeScript avec 8+ ans d&apos;expérience en développement web full-stack. 
-            Expert en Symfony, Laravel, ReactJS, TypeScript, Angular, NestJS et Next.js.
-            <br />
-            Passionné par l&apos;optimisation des performances, l&apos;automatisation CI/CD, les principes SOLID, DRY et Clean Architecture.
-          </motion.p>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300">
+            Avec plus de 8 ans d’expérience, je conçois des applications web
+            full-stack et accompagne les équipes dans leurs choix d’architecture
+            et leur livraison.
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={mounted ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex justify-center space-x-6 mb-12"
-          >
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-                className="text-gray-400 hover:text-primary-400 transition-colors"
-                aria-label={social.label}
-              >
-                <social.icon size={28} />
-              </motion.a>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={mounted ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex justify-center"
-          >
-            <motion.a
-              href="#about"
-              whileHover={{ y: 5 }}
-              className="text-primary-400 hover:text-primary-300 transition-colors"
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="mailto:m.andriamasy@outlook.fr"
+              className="inline-flex items-center justify-center rounded-lg bg-primary-500 px-6 py-3 font-semibold text-gray-950 transition-colors hover:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-300"
             >
-              <FaArrowDown size={32} className="animate-bounce" />
-            </motion.a>
-          </motion.div>
-        </motion.div>
+              Parler de votre projet
+            </a>
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center rounded-lg border border-gray-600 px-6 py-3 font-semibold text-white transition-colors hover:border-primary-300 hover:text-primary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-300"
+            >
+              Découvrir mes projets
+            </a>
+          </div>
+
+          <nav aria-label="Réseaux professionnels" className="mt-9 flex gap-5">
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                aria-label={label}
+                className="text-gray-400 transition-colors hover:text-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-300"
+              >
+                <Icon aria-hidden="true" size={22} />
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        <div className="mx-auto w-52 sm:w-60 lg:w-full">
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-primary-950/40">
+            <Image
+              src="/icon.png"
+              alt="Portrait d’Andriamasy Eric Mathieu"
+              width={256}
+              height={256}
+              priority
+              className="aspect-square w-full rounded-[1.5rem] object-cover"
+            />
+          </div>
+          <p className="mt-4 text-center text-sm text-gray-400">
+            Architecture · Développement · Leadership technique
+          </p>
+        </div>
       </div>
     </section>
   )
 }
-

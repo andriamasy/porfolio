@@ -70,7 +70,7 @@ export default function Contact() {
         </motion.div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid min-w-0 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {contactMethods.map((method, index) => (
               <motion.div
                 key={method.label}
@@ -78,11 +78,11 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gray-900/50 p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors"
+                className="min-w-0 bg-gray-900/50 p-5 sm:p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors"
               >
                 <div className="flex items-center">
                   <method.icon className="text-primary-400 text-2xl mr-4" />
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="text-white font-semibold mb-1">
                       {method.label}
                     </h3>
@@ -91,7 +91,7 @@ export default function Contact() {
                         href={method.href}
                         target={method.href.startsWith('http') ? '_blank' : undefined}
                         rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="text-gray-400 hover:text-primary-400 transition-colors"
+                        className="break-all text-gray-400 hover:text-primary-400 transition-colors"
                       >
                         {method.value}
                       </a>
@@ -123,4 +123,3 @@ export default function Contact() {
     </section>
   )
 }
-

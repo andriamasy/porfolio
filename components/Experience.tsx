@@ -107,10 +107,18 @@ export default function Experience() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary-300">
+            Parcours
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Expérience Professionnelle
+            Expérience professionnelle
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto"></div>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-gray-300">
+            Plus de 8 ans d’expérience, du développement full-stack à la
+            direction technique : conception d’applications, intégrations,
+            optimisation et accompagnement d’équipes.
+          </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -120,7 +128,7 @@ export default function Experience() {
 
             {experiences.map((exp, index) => (
               <motion.div
-                key={index}
+                key={`${exp.company}-${exp.title}-${exp.period}`}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -170,4 +178,3 @@ export default function Experience() {
     </section>
   )
 }
-

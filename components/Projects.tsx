@@ -1,13 +1,8 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-
 export default function Projects() {
   const projects = [
     {
       title: 'Application web et mobile médecins-patients',
-      description: 'Application complète de mise en relation et de gestion de consultations entre médecins et patients, disponible sur web et mobile. La solution permet la prise de rendez-vous, la téléconsultation, le suivi médical, la gestion des prescriptions et le partage sécurisé de documents médicaux. L\'architecture respecte les principes de Clean Architecture, SOLID et Design Patterns pour garantir la maintenabilité et l\'évolutivité.',
+      description: 'Application web et mobile de gestion des consultations : rendez-vous, téléconsultation, suivi médical, prescriptions et partage de documents. Une architecture pensée pour rester maintenable et évoluer.',
       technologies: ['NestJS', 'Next.js', 'React Native', 'MongoDB'],
       role: 'Lead Développeur',
       period: '2021 - Aujourd\'hui',
@@ -27,7 +22,7 @@ export default function Projects() {
     },
     {
       title: 'Système d\'Information de Gestion des Ressources Humaines (SIRH)',
-      description: 'Plateforme complète et intégrée de gestion des ressources humaines permettant une gestion centralisée de tous les aspects administratifs et opérationnels des employés. Le système couvre l\'ensemble du cycle de vie des ressources humaines, de l\'onboarding à la gestion des départs, en passant par le suivi des performances et la planification des ressources.',
+      description: 'Plateforme RH couvrant les dossiers des employés, les temps et activités, les absences et les plannings. Son architecture modulaire facilite l’évolution et la maintenance.',
       technologies: ['NestJS', 'ReactJS', 'MongoDB'],
       role: 'Chef de projet et Lead Développeur',
       period: 'Février 2024 - Décembre 2024',
@@ -43,7 +38,7 @@ export default function Projects() {
     },
     {
       title: 'Plateforme de formations en ligne et accompagnement',
-      description: 'Solution complète de e-learning permettant la création, la diffusion et le suivi de formations en ligne. La plateforme offre un environnement d\'apprentissage interactif avec des fonctionnalités avancées de suivi de progression, d\'évaluation des performances et d\'accompagnement personnalisé des apprenants. L\'interface est conçue avec un focus particulier sur l\'accessibilité et l\'expérience utilisateur optimale.',
+      description: 'Plateforme de formation en ligne avec suivi de progression, évaluations et accompagnement des apprenants. L’interface met l’accent sur l’accessibilité et le suivi des formations.',
       technologies: ['Laravel', 'Next.js', 'PostgreSQL'],
       role: 'Chef de projet et Lead Développeur',
       period: 'Novembre 2024 - Janvier 2025',
@@ -244,79 +239,100 @@ export default function Projects() {
     },
   ]
 
-  return (
-    <section id="projects" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+  const renderProject = (
+    project: (typeof projects)[number],
+    compact = false,
+  ) => (
+    <article
+      key={project.title}
+      className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-700/80 bg-gray-800/60 transition duration-300 hover:-translate-y-1 hover:border-primary-400/70 hover:bg-gray-800 ${
+        compact ? 'p-5' : 'p-6 sm:p-7'
+      }`}
+    >
+      <div className="mb-5 flex flex-wrap items-start justify-between gap-3">
+        <span
+          aria-hidden="true"
+          className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-primary-400/20 bg-primary-400/10 text-3xl"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Projets
-          </h2>
-          <div className="w-24 h-1 bg-primary-500 mx-auto"></div>
-        </motion.div>
+          {project.image}
+        </span>
+        <span className="max-w-full whitespace-normal break-words rounded-full border border-gray-600 px-3 py-1 text-xs font-medium text-gray-300">
+          {project.period}
+        </span>
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-gray-800/50 rounded-lg border border-gray-700 hover:border-primary-500 transition-all duration-300 overflow-hidden group h-full flex flex-col"
-            >
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="text-6xl mb-4">{project.image}</div>
-                <h3 className="text-2xl font-semibold text-white mb-2">
-                  {project.title}
-                </h3>
-                {project.role && (
-                  <p className="text-primary-400 text-sm font-medium mb-1">
-                    {project.role}
-                  </p>
-                )}
-                {project.period && (
-                  <p className="text-gray-500 text-xs mb-4 italic">
-                    {project.period}
-                  </p>
-                )}
-                <div className="mb-4 flex-grow">
-                  <h4 className="text-white font-semibold text-sm mb-2">Description du projet :</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
-                {project.achievements && project.achievements.length > 0 && (
-                  <div className="mb-4">
-                    <h4 className="text-white font-semibold text-sm mb-2">Réalisations clés :</h4>
-                    <ul className="list-disc list-inside space-y-2 text-gray-400 text-sm">
-                      {project.achievements.map((achievement, idx) => (
-                        <li key={idx} className="leading-relaxed">{achievement}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                <div className="flex flex-wrap gap-2 mt-auto pt-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-primary-900/50 text-primary-300 rounded-full text-xs font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+      <h3 className={`${compact ? 'text-lg' : 'text-xl'} font-semibold leading-snug text-white`}>
+        {project.title}
+      </h3>
+      <p className="mt-2 text-sm font-medium text-primary-300">{project.role}</p>
+      <p className="mt-4 flex-grow text-sm leading-6 text-gray-300">
+        {project.description}
+      </p>
+
+      <div className="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+        {project.technologies.map((tech) => (
+          <span
+            key={tech}
+            className="rounded-full bg-gray-700/80 px-3 py-1 text-xs font-medium text-gray-200"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      <details className="group/details mt-5 border-t border-gray-700 pt-4">
+        <summary className="cursor-pointer list-none text-sm font-semibold text-primary-300 marker:hidden hover:text-primary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-300 [&::-webkit-details-marker]:hidden">
+          <span className="group-open/details:hidden">
+            Voir les réalisations ({project.achievements.length})
+          </span>
+          <span className="hidden group-open/details:inline">Masquer les réalisations</span>
+        </summary>
+        <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-300">
+          {project.achievements.map((achievement) => (
+            <li key={achievement} className="flex gap-3">
+              <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-400" />
+              <span>{achievement}</span>
+            </li>
           ))}
+        </ul>
+      </details>
+    </article>
+  )
+
+  const featuredProjects = projects.slice(0, 3)
+  const additionalProjects = projects.slice(3)
+
+  return (
+    <section id="projects" className="bg-gray-900 py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary-300">
+            Réalisations
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Des projets concrets, de l’idée à la livraison
+          </h2>
+          <p className="mt-4 text-base leading-7 text-gray-300">
+            Quelques exemples de produits et de plateformes auxquels j’ai
+            contribué, avec mon rôle, les technologies utilisées et les
+            réalisations principales.
+          </p>
+        </header>
+
+        <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-3">
+          {featuredProjects.map((project) => renderProject(project))}
         </div>
+
+        <details className="group mx-auto mt-8 max-w-6xl rounded-2xl border border-gray-700 bg-gray-800/30 p-5 sm:p-7">
+          <summary className="cursor-pointer list-none text-center font-semibold text-white marker:hidden hover:text-primary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-300 [&::-webkit-details-marker]:hidden">
+            <span className="group-open:hidden">Explorer {additionalProjects.length} autres projets</span>
+            <span className="hidden group-open:inline">Masquer les autres projets</span>
+          </summary>
+          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {additionalProjects.map((project) => renderProject(project, true))}
+          </div>
+        </details>
       </div>
     </section>
   )
 }
-
