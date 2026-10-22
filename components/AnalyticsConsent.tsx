@@ -97,9 +97,9 @@ export default function AnalyticsConsent() {
           className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-3xl rounded-xl border border-gray-700 bg-gray-950 p-5 text-gray-100 shadow-2xl"
         >
           <p className="text-sm leading-6">
-            Ce site utilise Vercel Analytics et, si configuré, Google Analytics
-            pour mesurer son audience. Ces outils ne sont activés qu’après votre
-            accord. Vous pouvez modifier votre choix depuis le pied de page.
+            Ce site utilise des outils de mesure d’audience pour mieux comprendre
+            sa fréquentation. Ils ne sont activés qu’après votre accord. Vous
+            pouvez modifier votre choix depuis le pied de page.
           </p>
           {storageWarning && (
             <p role="status" className="mt-2 text-sm text-amber-300">

@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Andriamasy Eric Mathieu — Lead Developer à Madagascar',
+    default: 'Andriamasy Eric Mathieu - Lead Développeur',
     template: '%s | Andriamasy Eric Mathieu'
   },
   description: 'Lead Developer full-stack à Antananarivo, Madagascar. Découvrez les projets et l’expérience d’Andriamasy Eric Mathieu en Symfony, Laravel, React et TypeScript.',
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'fr_FR',
     url: 'https://andriamasy.vercel.app',
-    title: 'Andriamasy Eric Mathieu — Lead Developer à Madagascar',
+    title: 'Andriamasy Eric Mathieu - Lead Développeur',
     description: 'Découvrez les projets et l’expérience d’Andriamasy Eric Mathieu, Lead Developer full-stack à Antananarivo.',
     siteName: 'Portfolio Andriamasy Eric Mathieu',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Andriamasy Eric Mathieu — Lead Developer',
+    title: 'Andriamasy Eric Mathieu - Lead Développeur',
     description: 'Projets et expérience en développement web full-stack à Antananarivo, Madagascar.',
   },
   robots: {
