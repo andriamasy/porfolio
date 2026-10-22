@@ -97,6 +97,55 @@ export default function Experience() {
     },
   ]
 
+  const renderExperience = (exp: (typeof experiences)[number]) => (
+    <article
+      key={`${exp.company}-${exp.title}-${exp.period}`}
+      className="h-full min-w-0 rounded-2xl border border-gray-700/80 bg-gray-900/60 p-5 transition-colors hover:border-primary-400/60 sm:p-6"
+    >
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <div className="flex items-center gap-3">
+            <FaBriefcase aria-hidden="true" className="shrink-0 text-primary-300" />
+            <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
+          </div>
+          <p className="mt-2 text-sm font-medium text-primary-300">{exp.company}</p>
+        </div>
+        <span className="max-w-full whitespace-normal break-words rounded-full border border-gray-600 px-3 py-1 text-xs text-gray-300">
+          {exp.period}
+        </span>
+      </div>
+
+      <ul className="mt-5 flex flex-wrap gap-2">
+        {exp.technologies.map((tech) => (
+          <li
+            key={tech}
+            className="rounded-full bg-gray-800 px-2.5 py-1 text-xs text-gray-300"
+          >
+            {tech}
+          </li>
+        ))}
+      </ul>
+
+      <details className="group mt-5 border-t border-gray-700 pt-4">
+        <summary className="cursor-pointer list-none text-sm font-semibold text-primary-300 hover:text-primary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-300 [&::-webkit-details-marker]:hidden">
+          <span className="group-open:hidden">Voir les contributions</span>
+          <span className="hidden group-open:inline">Masquer les contributions</span>
+        </summary>
+        <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-300">
+          {exp.description.map((item) => (
+            <li key={item} className="flex gap-3">
+              <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-400" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </article>
+  )
+
+  const selectedExperiences = experiences.slice(0, 4)
+  const previousExperiences = experiences.slice(4)
+
   return (
     <section id="experience" className="py-20 bg-gray-800/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,58 +170,37 @@ export default function Experience() {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-500 hidden md:block"></div>
-
-            {experiences.map((exp, index) => (
+        <div className="mx-auto max-w-6xl">
+          <h3 className="mb-5 text-lg font-semibold text-white">
+            Expériences sélectionnées
+          </h3>
+          <div className="grid min-w-0 gap-4 md:grid-cols-2">
+            {selectedExperiences.map((exp, index) => (
               <motion.div
                 key={`${exp.company}-${exp.title}-${exp.period}`}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="relative mb-12 md:mb-16"
+                transition={{ duration: 0.45, delay: index * 0.08 }}
               >
-                <div className="flex flex-col md:flex-row items-start">
-                  {/* Timeline dot */}
-                  <div className="hidden md:flex absolute left-6 w-4 h-4 bg-primary-500 rounded-full border-4 border-gray-800 z-10"></div>
-
-                  <div className="md:ml-16 w-full">
-                    <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors">
-                      <div className="flex items-center mb-3">
-                        <FaBriefcase className="text-primary-400 mr-3" />
-                        <h3 className="text-2xl font-semibold text-white">
-                          {exp.title}
-                        </h3>
-                      </div>
-                      <p className="text-primary-400 font-medium mb-2">
-                        {exp.company} • {exp.period}
-                      </p>
-                      {exp.technologies && (
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {exp.technologies.map((tech) => (
-                            <span
-                              key={tech}
-                              className="px-2 py-1 bg-primary-900/50 text-primary-300 rounded text-xs"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                      <ul className="list-disc list-inside space-y-2 text-gray-300">
-                        {exp.description.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                {renderExperience(exp)}
               </motion.div>
             ))}
           </div>
+
+          <details className="group mt-6 rounded-2xl border border-gray-700 bg-gray-900/30 p-5 sm:p-6">
+            <summary className="cursor-pointer list-none text-center font-semibold text-gray-200 hover:text-primary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-300 [&::-webkit-details-marker]:hidden">
+              <span className="group-open:hidden">
+                Voir {previousExperiences.length} autres expériences
+              </span>
+              <span className="hidden group-open:inline">
+                Masquer les autres expériences
+              </span>
+            </summary>
+            <div className="mt-6 grid min-w-0 gap-4 md:grid-cols-2">
+              {previousExperiences.map(renderExperience)}
+            </div>
+          </details>
         </div>
       </div>
     </section>

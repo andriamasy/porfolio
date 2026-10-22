@@ -245,26 +245,36 @@ export default function Projects() {
   ) => (
     <article
       key={project.title}
-      className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-700/80 bg-gray-800/60 transition duration-300 hover:-translate-y-1 hover:border-primary-400/70 hover:bg-gray-800 ${
-        compact ? 'p-5' : 'p-6 sm:p-7'
+      className={`group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border border-gray-700/80 bg-gray-800/60 transition duration-300 hover:-translate-y-1 hover:border-primary-400/70 hover:bg-gray-800 ${
+        compact ? 'p-4 sm:p-5' : 'p-5 sm:p-6'
       }`}
     >
-      <div className="mb-5 flex flex-wrap items-start justify-between gap-3">
-        <span
-          aria-hidden="true"
-          className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-primary-400/20 bg-primary-400/10 text-3xl"
-        >
-          {project.image}
-        </span>
-        <span className="max-w-full whitespace-normal break-words rounded-full border border-gray-600 px-3 py-1 text-xs font-medium text-gray-300">
+      <div
+        aria-hidden="true"
+        className="relative -mx-5 -mt-5 mb-5 h-32 overflow-hidden border-b border-gray-700 bg-gradient-to-br from-primary-900/80 via-gray-800 to-gray-900 sm:-mx-6 sm:-mt-6 sm:h-36"
+      >
+        <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(148,163,184,.15)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,.15)_1px,transparent_1px)] [background-size:24px_24px]" />
+        <div className="absolute -right-8 -top-16 h-48 w-48 rounded-full border border-primary-200/10" />
+        <div className="absolute -right-2 -top-10 h-36 w-36 rounded-full border border-primary-200/10" />
+        <div className="absolute bottom-4 left-5 flex items-end gap-3 sm:left-6">
+          <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/15 bg-gray-950/70 text-3xl shadow-lg backdrop-blur-sm">
+            {project.image}
+          </span>
+          <span className="mb-1 rounded-full border border-white/15 bg-gray-950/60 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary-100 backdrop-blur-sm">
+            Aperçu illustratif
+          </span>
+        </div>
+      </div>
+
+      <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
+        <h3 className={`${compact ? 'text-lg' : 'text-xl'} min-w-0 flex-1 font-semibold leading-snug text-white`}>
+        {project.title}
+        </h3>
+        <span className="max-w-full whitespace-normal break-words rounded-full border border-gray-600 px-3 py-1 text-right text-xs font-medium text-gray-300">
           {project.period}
         </span>
       </div>
-
-      <h3 className={`${compact ? 'text-lg' : 'text-xl'} font-semibold leading-snug text-white`}>
-        {project.title}
-      </h3>
-      <p className="mt-2 text-sm font-medium text-primary-300">{project.role}</p>
+      <p className="text-sm font-medium text-primary-300">{project.role}</p>
       <p className="mt-4 flex-grow text-sm leading-6 text-gray-300">
         {project.description}
       </p>
@@ -310,7 +320,7 @@ export default function Projects() {
             Réalisations
           </p>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Des projets concrets, de l’idée à la livraison
+            Des réalisations pensées pour répondre à des besoins concrets
           </h2>
           <p className="mt-4 text-base leading-7 text-gray-300">
             Quelques exemples de produits et de plateformes auxquels j’ai

@@ -8,17 +8,17 @@ export default function About() {
     {
       icon: FaCode,
       title: 'Architecture & Design',
-      description: 'Application des principes SOLID, Design Patterns, Clean Architecture. Conception de systèmes scalables et maintenables.',
+      description: 'Des choix d’architecture adaptés au produit pour construire des applications évolutives et faciles à maintenir.',
     },
     {
       icon: FaUsers,
       title: 'Leadership & Mentorat',
-      description: 'Direction technique d&apos;équipes, supervision du développement, distribution des tâches et suivi technique. Mentorat des développeurs.',
+      description: 'Clarification des priorités, accompagnement des développeurs et partage des bonnes pratiques au quotidien.',
     },
     {
       icon: FaRocket,
       title: 'Optimisation & Performance',
-      description: 'Optimisation des performances avec réduction de 30-50% des temps de réponse. Mise en place de pipelines CI/CD et déploiement via Docker.',
+      description: 'Amélioration mesurée des performances et automatisation de la livraison avec Docker et des pipelines CI/CD.',
     },
   ]
 
@@ -32,15 +32,18 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            À propos de moi
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary-300">
+            Ma façon de travailler
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
+            Un partenaire technique, de la conception à la livraison
           </h2>
           <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Développeur Symfony, Développeur ReactJS, Développeur TypeScript et Développeur Laravel avec 8+ ans d&apos;expérience. 
-            Lead Developer à Madagascar spécialisé en développement web full-stack. Expert en Symfony, Laravel, ReactJS, TypeScript, JavaScript, Angular, NestJS et Next.js. 
-            Application rigoureuse des principes SOLID, Design Patterns, DRY, et KISS. Développeur freelance disponible pour vos projets web à Antananarivo et partout à Madagascar. 
-            Passionné par l&apos;optimisation des performances, l&apos;automatisation CI/CD et les bonnes pratiques de développement.
+          <p className="mx-auto max-w-3xl text-base leading-7 text-gray-300 sm:text-lg">
+            Basé à Antananarivo et fort de plus de 8 ans d’expérience, je
+            transforme les besoins métier en applications web maintenables.
+            J’interviens sur l’architecture, le développement full-stack et
+            l’accompagnement technique des équipes.
           </p>
         </motion.div>
 
@@ -68,4 +71,3 @@ export default function About() {
     </section>
   )
 }
-
